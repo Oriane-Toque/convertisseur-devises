@@ -7,3 +7,14 @@
   <title>Convertisseur</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+<body>
+
+  <h1>Convertisseurs de monnaies</h1>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.php">EURO => USD</a></li>
+          <li><a href="yens.php">EURO => JPY</a></li>
+        </ul>
+      </nav>
+    </header>

@@ -11,22 +11,17 @@ function getAmountInDollars ($amount)
   return $amountInDollars;
 }
 
-/* FONCTION CONVERSION EURO => YENS */
-
 include '../inc/header.php';
 ?>
 
-<body>
   <!-- CONVERSION EURO => DOLLAR -->
-  <h1>Convertisseurs de monnaies</h1>
   <form action="" method="get">
     <fieldset>
       <legend>EURO => USD</legend>
       <label for="montant">Conversion EURO => USD</label>
-      <input type="number" name="montant_euro" id="montant">
+      <input type="number" name="montant_euro" id="montant" value="1">
       <button type="submit">convertir</button>
     </fieldset>
-    
   </form>
   
   <?php
@@ -46,6 +41,5 @@ include '../inc/header.php';
     endif; 
   ?>
 
-  <!-- CONVERSION EURO => YENS -->
 </body>
 </html>
