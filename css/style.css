@@ -27,6 +27,7 @@ h1 {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
+  text-decoration: 1px underline double #fff;
 }
 
 h2 {
