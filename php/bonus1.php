@@ -7,6 +7,19 @@ function getConvertedAmount ($amount, $devise)
   return $amountInDevise;
 }
 
+function isEven ($number)
+{
+  $numberIsEven = $number%2;
+
+  if ($numberIsEven == 0) :
+?>  <p class="bonus1_paragraphe">Le montant converti est un nombre <strong>pair</strong></p>
+<?php
+  else :
+?>  <p class="bonus1_paragraphe">Le montant converti est un nombre <strong>impair</strong></p>
+<?php
+  endif;
+}
+
 include '../inc/header.php';
 ?>
   
@@ -47,6 +60,7 @@ include '../inc/header.php';
       <h2 class="bonus1_title">Résultat de la conversion</h2>
       <p class="bonus1_paragraphe"><?= $numberToConvert; ?> EURO = <strong><?= $conversion; ?> <?= $_GET['devise'] ?></strong></p>
   <?php
+        $isEven = isEven($conversion);
     else:
   ?>
       <h2 class="bonus1_title">Attention</h2>
