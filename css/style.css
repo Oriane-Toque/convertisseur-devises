@@ -37,6 +37,18 @@ h2 {
   width: 30%;
 }
 
+.yens_title {
+  color: paleturquoise;
+  border-left: solid 0.5rem steelblue;
+  border-bottom: solid 0.2rem steelblue;
+}
+
+.bonus1_title {
+  color: palevioletred;
+  border-left: solid 0.5rem crimson;
+  border-bottom: solid 0.2rem crimson;
+}
+
 nav {
   margin-bottom: 20px;
 }
@@ -74,6 +86,10 @@ li:nth-of-type(2) {
   border: solid 0.3rem paleturquoise;
 }
 
+li:nth-of-type(3) {
+  border: solid 0.3rem palevioletred;
+}
+
 li:nth-of-type(1):hover,
 li:nth-of-type(1) a:hover {
   background-color: palegreen;
@@ -86,9 +102,23 @@ li:nth-of-type(2) a:hover {
   color: steelblue;
 }
 
+li:nth-of-type(3):hover,
+li:nth-of-type(3) a:hover {
+  background-color: palevioletred;
+  color: crimson;
+}
+
 p {
   margin: 0;
   color: palegreen;
+}
+
+.yens_paragraphe {
+  color: paleturquoise;
+}
+
+.bonus1_paragraphe {
+  color: palevioletred;
 }
 
 strong {
@@ -110,16 +140,30 @@ form:first-of-type {
 
 input,
 label,
-button {
+button,
+select {
   display: block;
   text-align: center;
   margin: auto;
   padding: 5px;
 }
 
+select {
+  border: solid 0.2rem crimson;
+  min-width: 11.5rem;
+}
+
 input {
   border: solid 0.2rem seagreen;
   border-radius: 0.2rem;
+}
+
+#montant1 { /* input yens.php */
+  border: solid 0.2rem steelblue;
+}
+
+#montant2 {
+  border: solid 0.2rem crimson;
 }
 
 label,
@@ -128,14 +172,42 @@ legend {
   font-weight: 900;
 }
 
+.yens_label { /* label yens.php */
+  color: paleturquoise;
+}
+
+.bonus1_label { /* label yens.php */
+  color: palevioletred;
+}
+
+.bonus1_label:nth-of-type(2) {
+  margin-top: 20px;
+}
+
 legend {
   padding: 5px 10px 5px 10px;
   background-color: seagreen;
   color: #fff;
 }
 
+.yens_legend-bg { /* bg legend yens.php */
+  background-color: steelblue;
+}
+
+.bonus1_legend-bg { /* bg legend yens.php */
+  background-color: crimson;
+}
+
 fieldset {
   border: solid 0.2rem seagreen;
+}
+
+.yens_fieldset {
+  border: solid 0.2rem steelblue;
+}
+
+.bonus1_fieldset {
+  border: solid 0.2rem crimson;
 }
 
 button {
@@ -154,4 +226,22 @@ button:hover {
   background-color: #fff;
   text-decoration: underline seagreen;
   color: seagreen;
+}
+
+.yens_button {
+  background-color: steelblue;
+}
+
+.yens_button:hover {
+  text-decoration: underline steelblue;
+  color: steelblue;
+}
+
+.bonus1_button {
+  background-color: crimson;
+}
+
+.bonus1_button:hover {
+  text-decoration: underline crimson;
+  color: crimson;
 }

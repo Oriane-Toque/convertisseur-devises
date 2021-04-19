@@ -14,11 +14,11 @@
 ?>
   <!-- CONVERSION EURO => YENS -->
   <form action="" method="get">
-    <fieldset>
-      <legend>EURO => JPY</legend>
-      <label for="montant1">Conversion EURO => JPY</label>
+    <fieldset class="yens_fieldset">
+      <legend class="yens_legend-bg">EURO => JPY</legend>
+      <label class="yens_label" for="montant1">Conversion EURO => JPY</label>
       <input type="number" name="montant1_euro" id="montant1" value="1">
-      <button type="submit">convertir</button>
+      <button class="yens_button" type="submit">convertir</button>
     </fieldset>
   </form>
 
@@ -28,13 +28,13 @@
 
       $yen = getAmountInYens(intval($numberToConvert1));
   ?>
-      <h2>Résultat de la conversion</h2>
-      <p><?= $numberToConvert1; ?> EURO = <strong><?= $yen; ?> USD</strong></p>
+      <h2 class="yens_title">Résultat de la conversion</h2>
+      <p class="yens_paragraphe"><?= $numberToConvert1; ?> EURO = <strong><?= $yen; ?> USD</strong></p>
   <?php
     else:
   ?>
-      <h2>Attention</h2>
-      <p>Veuillez indiquer un montant supérieur à 0</p>
+      <h2 class="yens_title">Attention</h2>
+      <p class="yens_paragraphe">Veuillez indiquer un montant supérieur à 0</p>
   <?php
     endif; 
   ?>
