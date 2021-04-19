@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Roboto';
+  background-color:rgb(26, 27, 29);
+}
+
+h1,
+h2 {
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: palegreen;
+  border-left: solid 0.5rem seagreen;
+  border-bottom: solid 0.2rem seagreen;
+  padding: 0 0 0 5px;
+  width: 30%;
+}
+
+p {
+  margin: 0;
+  color: palegreen;
+}
+
+strong {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: #fff underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+input,
+label,
+button {
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
+
+input {
+  border: solid 0.2rem seagreen;
+  border-radius: 0.2rem;
+}
+
+label,
+legend {
+  color: palegreen;
+  font-weight: 900;
+}
+
+legend {
+  padding: 5px 10px 5px 10px;
+  background-color: seagreen;
+  color: #fff;
+}
+
+fieldset {
+  border: solid 0.2rem seagreen;
+}
+
+button {
+  background-color: seagreen;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  padding: 5px 20px 5px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  text-decoration: underline seagreen;
+  color: seagreen;
+}
