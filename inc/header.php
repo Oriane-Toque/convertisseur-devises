@@ -9,8 +9,9 @@
 </head>
 <body>
 
-  <h1>Convertisseurs de monnaies</h1>
+  
     <header>
+      <h1>Convertisseurs de monnaies</h1>
       <nav>
         <ul>
           <li><a href="index.php">EURO => USD</a></li>

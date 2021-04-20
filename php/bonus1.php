@@ -2,9 +2,18 @@
 
 function getConvertedAmount ($amount, $devise)
 {
-  $amountInDevise = $amount * $devise;
+  switch ($devise) :
+    case 'Dollar': 
+      return $amount *= 1.14;
+      break;
+    case 'Yen':
+      return $amount *= 126;
+      break;
+    case 'Peso':
+      return $amount *= 33.18;
+      break;
+  endswitch;
 
-  return $amountInDevise;
 }
 
 function isEven ($number)
@@ -30,9 +39,9 @@ include '../inc/header.php';
       <input type="number" name="montant_euro" id="montant2">
       <label class="bonus1_label" for="devise">Sélectionner la devise que vous désirez</label>
       <select name="devise" id="devise">
-        <option>USD</option>
-        <option>JPY</option>
-        <option>ARS</option>
+        <option>Dollar</option>
+        <option>Yen</option>
+        <option>Peso</option>
       </select>
       <button class="bonus1_button" type="submit">convertir</button>
     </fieldset>
@@ -40,31 +49,20 @@ include '../inc/header.php';
 
   <?php
     if (!empty($_GET) && !empty($_GET['montant_euro']) && !empty($_GET['devise'])) :
-        
-        switch ($_GET['devise']) :
-          case 'USD': 
-            $devise = 1.14;
-            break;
-          case 'JPY':
-            $devise = 126;
-            break;
-          case 'ARS':
-            $devise = 33.18;
-            break;
-        endswitch;
 
         $numberToConvert = $_GET['montant_euro'];
+        $choice_devise = $_GET['devise'];
       
-        $conversion = getConvertedAmount(intval($numberToConvert), $devise);   
+        $conversion = getConvertedAmount(intval($numberToConvert), $choice_devise);   
   ?>
-      <h2 class="bonus1_title">Résultat de la conversion</h2>
-      <p class="bonus1_paragraphe"><?= $numberToConvert; ?> EURO = <strong><?= $conversion; ?> <?= $_GET['devise'] ?></strong></p>
+        <h2 class="bonus1_title">Résultat de la conversion</h2>
+        <p class="bonus1_paragraphe"><?= $numberToConvert; ?> EURO = <strong><?= $conversion; ?> <?= $choice_devise ?></strong></p>
   <?php
         $isEven = isEven($conversion);
     else:
   ?>
-      <h2 class="bonus1_title">Attention</h2>
-      <p class="bonus1_paragraphe">Veuillez indiquer un montant supérieur à 0 ainsi que votre devise pour la conversion</p>
+        <h2 class="bonus1_title">Attention</h2>
+        <p class="bonus1_paragraphe">Veuillez indiquer un montant supérieur à 0 ainsi que votre devise pour la conversion</p>
   <?php
     endif;
   ?>
