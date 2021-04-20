@@ -23,7 +23,7 @@ echo getConvertedDevise(100, 'Peso').'<br>';
 function getConvertedDevise2 ($amount, $isYen = false)
 {
   if ($isYen == true) :
-    
+
     return $amount * 126;
 
   else :
