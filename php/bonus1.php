@@ -35,8 +35,8 @@ include '../inc/header.php';
   <form action="" method="get">
     <fieldset class="bonus1_fieldset">
       <legend class="bonus1_legend-bg">EURO => DEVISE</legend>
-      <label class="bonus1_label" for="montant2">Montant à convertir</label>
-      <input type="number" name="montant_euro" id="montant2">
+      <label class="bonus1_label" for="montant2">Montant (EURO) à convertir</label>
+      <input type="number" name="montant_euro" id="montant2" value="1">
       <label class="bonus1_label" for="devise">Sélectionner la devise que vous désirez</label>
       <select name="devise" id="devise">
         <option>Dollar</option>
@@ -48,12 +48,12 @@ include '../inc/header.php';
   </form>
 
   <?php
-    if (!empty($_GET) && !empty($_GET['montant_euro']) && !empty($_GET['devise'])) :
+    if (!empty($_GET) && !empty($_GET['montant_euro']) && $_GET['montant_euro'] >= 0 && !empty($_GET['devise'])) :
 
         $numberToConvert = $_GET['montant_euro'];
         $choice_devise = $_GET['devise'];
       
-        $conversion = getConvertedAmount(intval($numberToConvert), $choice_devise);   
+        $conversion = getConvertedAmount($numberToConvert, $choice_devise);   
   ?>
         <h2 class="bonus1_title">Résultat de la conversion</h2>
         <p class="bonus1_paragraphe"><?= $numberToConvert; ?> EURO = <strong><?= $conversion; ?> <?= $choice_devise ?></strong></p>
